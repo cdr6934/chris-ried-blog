@@ -17,18 +17,17 @@ const ptComponents = {
         return null
       }
       return (
-        // eslint-disable-next-line @next/next/no-img-element
         <img
           alt={value.alt || ' '}
           loading="lazy"
-          src={urlFor(value).width(320).height(240).fit('max').auto('format')}
+          src={String(urlFor(value).width(320).height(240).fit('max').auto('format'))}
         />
       )
     }
   }
 }
 
-const Post = ({post}:any) => {
+const Post = ({post}:any ) => {
   const {
     title = 'Missing title',
     name = 'Missing name',
@@ -84,7 +83,7 @@ export async function getStaticPaths() {
   }
 }
 
-export async function getStaticProps(context: { params: { slug?: "" | undefined } }) {
+export async function getStaticProps(context: any) {
   // It's important to default the slug so that it doesn't return "undefined"
   const { slug = "" } = context.params
   const post = await client.fetch(query, { slug })
