@@ -80,7 +80,7 @@ const Footer = () => {
         align="center"
       >
         <Text fontSize="sm" color="on-accent-subtle">
-          &copy; {new Date().getFullYear()} Chakra UI Pro, Inc. All rights reserved.
+          &copy; {new Date().getFullYear()} CBayes / Chris Ried
         </Text>
         <ButtonGroup variant="ghost-on-accent">
           <IconButton
