@@ -1,8 +1,11 @@
 
   import * as React from 'react'
   import { Stack, Heading, Text, Box, useBreakpointValue, Input, Button } from '@chakra-ui/react'
-  
-const Blog = () => { 
+  import client from '../client'
+  import groq from 'groq'
+  import Link from 'next/link'
+
+const Blog = ({posts}) => { 
 
     return (  <Box pt="8" pb="16">
     <Stack spacing={{ base: '8', md: '10' }} align="center">
@@ -42,9 +45,35 @@ const Blog = () => {
         <Button size="lg" colorScheme="teal" type="submit">
           Subscribe
         </Button>
+        </Stack>
+        <Stack maxW={{ md: 'lg' }} width="full">
+        {posts.length > 0 && posts.map(
+          ({ _id, title = '', slug = '', publishedAt = '' }) =>
+            slug && (
+              <li key={_id}>
+                <Link href="/post/[slug]" as={`/post/${slug.current}`}>
+                <Text fontSize={{ base: 'lg', md: 'xl' }} maxW="2xl" >{title}</Text>
+                </Link>{' '}
+                ({new Date(publishedAt).toDateString()})
+              </li>
+            )
+        )}
+ 
       </Stack>
     </Stack>
+  
   </Box>)
+}
+
+export async function getStaticProps() {
+    const posts = await client.fetch(groq`
+      *[_type == "post" && publishedAt < now()] | order(publishedAt desc)
+    `)
+    return {
+      props: {
+        posts
+      }
+    }
 }
 
 export default Blog 
