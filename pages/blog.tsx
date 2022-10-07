@@ -5,7 +5,7 @@
   import groq from 'groq'
   import Link from 'next/link'
 
-const Blog = ({posts}) => { 
+const Blog = ({posts}: any) => { 
 
     return (  <Box pt="8" pb="16">
     <Stack spacing={{ base: '8', md: '10' }} align="center">
@@ -48,7 +48,7 @@ const Blog = ({posts}) => {
         </Stack>
         <Stack maxW={{ md: 'lg' }} width="full">
         {posts.length > 0 && posts.map(
-          ({ _id, title = '', slug = '', publishedAt = '' }) =>
+          ({ _id, title = '', slug = '', publishedAt = '' }: any) =>
             slug && (
               <li key={_id}>
                 <Link href="/post/[slug]" as={`/post/${slug.current}`}>
