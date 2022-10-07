@@ -4,7 +4,6 @@ import imageUrlBuilder from '@sanity/image-url'
 import {PortableText} from '@portabletext/react'
 import client from '../../client'
 import { Heading, Container, Text } from '@chakra-ui/react'
-import { Key, ReactElement, JSXElementConstructor, ReactFragment } from 'react'
 
 function urlFor (source: any) {
   return imageUrlBuilder(client).image(source)
@@ -27,7 +26,7 @@ const ptComponents = {
   }
 }
 
-const Post = ({post}:any ) => {
+const Post = ({post}:any) => {
   const {
     title = 'Missing title',
     name = 'Missing name',
@@ -43,7 +42,7 @@ const Post = ({post}:any ) => {
       {categories && (
         <ul>
           Posted in
-          {categories.map((category: boolean | Key | ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | null | undefined) => <li key={category}>{category}</li>)}
+          {categories.map((category:any) => <li key={category}>{category}</li>)}
         </ul>
       )}
       {authorImage && (
@@ -78,12 +77,12 @@ export async function getStaticPaths() {
   )
 
   return {
-    paths: paths.map((slug: any) => ({params: {slug}})),
+    paths: paths.map((slug:any) => ({params: {slug}})),
     fallback: true,
   }
 }
 
-export async function getStaticProps(context: any) {
+export async function getStaticProps(context:any) {
   // It's important to default the slug so that it doesn't return "undefined"
   const { slug = "" } = context.params
   const post = await client.fetch(query, { slug })
