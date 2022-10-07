@@ -26,7 +26,15 @@ const ptComponents = {
   }
 }
 
-const Post = ({post}) => {
+type Post = { 
+  title: string; 
+  name: string; 
+  categories: string[]; 
+  authorImage: ImageBitmap; 
+  body: [];
+}
+
+const Post = ({post}:any) => {
   const {
     title = 'Missing title',
     name = 'Missing name',

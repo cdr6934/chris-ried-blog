@@ -48,7 +48,7 @@ const Blog = ({posts}: any) => {
         </Stack>
         <Stack maxW={{ md: 'lg' }} width="full">
         {posts.length > 0 && posts.map(
-          ({ _id, title = '', slug = '', publishedAt = '' }: any) =>
+          ({ _id, title = '', slug = '', publishedAt = '' }) =>
             slug && (
               <li key={_id}>
                 <Link href="/post/[slug]" as={`/post/${slug.current}`}>
