@@ -237,6 +237,11 @@
     "@chakra-ui/react-context" "2.0.4"
     "@chakra-ui/spinner" "2.0.10"
 
+"@chakra-ui/anatomy@2.0.6":
+  "integrity" "sha512-Vgop2FFdhVtX7BydjZdJWZAWy+DdXBU1IMaBppz6COaH+/7OXxoI2ec2bs17ehJyBO0M+ud3OLj5UCFQ79YsoQ=="
+  "resolved" "https://registry.npmjs.org/@chakra-ui/anatomy/-/anatomy-2.0.6.tgz"
+  "version" "2.0.6"
+
 "@chakra-ui/anatomy@2.0.7":
   "integrity" "sha512-vzcB2gcsGCxhrKbldQQV6LnBPys4eSSsH2UA2mLsT+J3WlXw0aodZw0eE/nH7yLxe4zaQ4Gnc0KjkFW4EWNKSg=="
   "resolved" "https://registry.npmjs.org/@chakra-ui/anatomy/-/anatomy-2.0.7.tgz"
@@ -550,6 +555,13 @@
     "@chakra-ui/react-context" "2.0.4"
     "@chakra-ui/react-use-safe-layout-effect" "2.0.2"
 
+"@chakra-ui/pro-theme@^0.0.55":
+  "integrity" "sha512-c7MdkIBVoG00ly58noBbKyLI7F2vnpGl6jQ0n2UnrlL7zkZBF3jH/ZeR3f5p5pL3ED1Pe38HVsb9l5r0MIT5jA=="
+  "resolved" "https://registry.npmjs.org/@chakra-ui/pro-theme/-/pro-theme-0.0.55.tgz"
+  "version" "0.0.55"
+  dependencies:
+    "@chakra-ui/theme-tools" "2.0.11"
+
 "@chakra-ui/progress@2.0.11":
   "integrity" "sha512-2OwxGxI6W757QpDB6b++B4b2+t0oBgaQdHnd4/y35n3+mOFj++Wg7XpW4/iDHn+x3LkM+X3NIgdBWQFlmGx+6w=="
   "resolved" "https://registry.npmjs.org/@chakra-ui/progress/-/progress-2.0.11.tgz"
@@ -718,7 +730,7 @@
   dependencies:
     "@chakra-ui/utils" "2.0.11"
 
-"@chakra-ui/react@^2.3.5":
+"@chakra-ui/react@^2.3.5", "@chakra-ui/react@1.8.x || 2.x":
   "integrity" "sha512-bQDRV23M3IvF0+AorTvqJmG/4T6KKQIb+1XGA2RyxonoSHVt89HbN3qnygHJw06Sdgpclxdbr/1qZ4o8+SMbpA=="
   "resolved" "https://registry.npmjs.org/@chakra-ui/react/-/react-2.3.5.tgz"
   "version" "2.3.5"
@@ -882,6 +894,14 @@
   "version" "2.0.12"
   dependencies:
     "@chakra-ui/form-control" "2.0.11"
+
+"@chakra-ui/theme-tools@2.0.11":
+  "integrity" "sha512-0Juf98bAyOgnBeQ39nMKWqRsOxZDw75BbAB8o0oVyjhYVS1wJh7tFX1ZRV8N/+AN6fuRXEznZPpyUh3J+ZTiRg=="
+  "resolved" "https://registry.npmjs.org/@chakra-ui/theme-tools/-/theme-tools-2.0.11.tgz"
+  "version" "2.0.11"
+  dependencies:
+    "@chakra-ui/anatomy" "2.0.6"
+    "@ctrl/tinycolor" "^3.4.0"
 
 "@chakra-ui/theme-tools@2.0.12":
   "integrity" "sha512-mnMlKSmXkCjHUJsKWmJbgBTGF2vnLaMLv1ihkBn5eQcCubMQrBLTiMAEFl5pZdzuHItU6QdnLGA10smcXbNl0g=="
@@ -1084,6 +1104,11 @@
     "minimatch" "^3.1.2"
     "strip-json-comments" "^3.1.1"
 
+"@fontsource/inter@^4.5.13":
+  "integrity" "sha512-nABtF6jNZZHrotLRiGBByhG7NKJGJHgMbX5W8v6C/7nSdyiWtMRfZX7AMIECDLYGUOEArZDeVO/SbkgwKLrLJw=="
+  "resolved" "https://registry.npmjs.org/@fontsource/inter/-/inter-4.5.13.tgz"
+  "version" "4.5.13"
+
 "@humanwhocodes/config-array@^0.10.5":
   "integrity" "sha512-MDl6D6sBsaV452/QSdX+4CXIjZhIcI0PELsxUjk4U828yd58vk3bTIvk/6w5FY+4hIy9sLW0sfrV7K7Kc++j/w=="
   "resolved" "https://registry.npmjs.org/@humanwhocodes/config-array/-/config-array-0.10.7.tgz"
@@ -1243,6 +1268,11 @@
   "integrity" "sha512-50/17A98tWUfQ176raKiOGXuYpLyyVMkxxG6oylzL3BPOlA6ADGdK7EYunSa4I064xerltq9TGXs8HmOk5E+vw=="
   "resolved" "https://registry.npmjs.org/@popperjs/core/-/core-2.11.6.tgz"
   "version" "2.11.6"
+
+"@prisma/engines@4.4.0":
+  "integrity" "sha512-Fpykccxlt9MHrAs/QpPGpI2nOiRxuLA+LiApgA59ibbf24YICZIMWd3SI2YD+q0IAIso0jCGiHhirAIbxK3RyQ=="
+  "resolved" "https://registry.npmjs.org/@prisma/engines/-/engines-4.4.0.tgz"
+  "version" "4.4.0"
 
 "@rushstack/eslint-patch@^1.1.3":
   "integrity" "sha512-sXo/qW2/pAcmT43VoRKOJbDOfV3cYpq3szSVfIThQXNt+E4DfKj361vaAt3c88U5tPUxzEswam7GW48PJqtKAg=="
@@ -2781,6 +2811,13 @@
   "resolved" "https://registry.npmjs.org/prelude-ls/-/prelude-ls-1.2.1.tgz"
   "version" "1.2.1"
 
+"prisma@^4.4.0":
+  "integrity" "sha512-l/QKLmLcKJQFuc+X02LyICo0NWTUVaNNZ00jKJBqwDyhwMAhboD1FWwYV50rkH4Wls0RviAJSFzkC2ZrfawpfA=="
+  "resolved" "https://registry.npmjs.org/prisma/-/prisma-4.4.0.tgz"
+  "version" "4.4.0"
+  dependencies:
+    "@prisma/engines" "4.4.0"
+
 "prop-types@^15.6.2", "prop-types@^15.8.1":
   "integrity" "sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg=="
   "resolved" "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
@@ -2832,6 +2869,11 @@
     "use-callback-ref" "^1.3.0"
     "use-sidecar" "^1.1.2"
 
+"react-icons@^4.4.0":
+  "integrity" "sha512-fSbvHeVYo/B5/L4VhB7sBA1i2tS8MkT0Hb9t2H1AVPkwGfVHLJCqyr2Py9dKMxsyM63Eng1GkdZfbWj+Fmv8Rg=="
+  "resolved" "https://registry.npmjs.org/react-icons/-/react-icons-4.4.0.tgz"
+  "version" "4.4.0"
+
 "react-is@^16.13.1", "react-is@^16.7.0":
   "integrity" "sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ=="
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
@@ -2865,7 +2907,7 @@
     "invariant" "^2.2.4"
     "tslib" "^2.0.0"
 
-"react@^15.3.0 || ^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.9.0 || ^17.0.0 || ^18.0.0", "react@^17.0.2 || ^18.0.0-0", "react@^18.0.0", "react@^18.2.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@>=16.8.0", "react@>=18", "react@18.2.0":
+"react@*", "react@^15.3.0 || ^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.9.0 || ^17.0.0 || ^18.0.0", "react@^17.0.2 || ^18.0.0-0", "react@^18.0.0", "react@^18.2.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@>=16.8.0", "react@>=18", "react@18.2.0":
   "integrity" "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   "version" "18.2.0"
