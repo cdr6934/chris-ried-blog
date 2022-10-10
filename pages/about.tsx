@@ -77,7 +77,7 @@ const About = () => {
         <Stack spacing="10">
           <Stack spacing="3" maxW="sm" width="full">
             <Text fontSize={{ base: 'sm', md: 'md' }} color="accent" fontWeight="semibold">
-              We're hiring
+              Something to be said here! 
             </Text>
             <Stack spacing={{ base: '4', md: '5' }}>
               <Heading size={useBreakpointValue({ base: 'sm', md: 'md' })}>Meet our team</Heading>
