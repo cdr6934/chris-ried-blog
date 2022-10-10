@@ -2,8 +2,9 @@
 import groq from 'groq'
 import imageUrlBuilder from '@sanity/image-url'
 import {PortableText} from '@portabletext/react'
+import ReactMarkdown from 'react-markdown'
 import client from '../../client'
-
+import {Container, Heading, Text, Tag, Box,  HStack } from '@chakra-ui/react'
 function urlFor (source) {
   return imageUrlBuilder(client).image(source)
 }
@@ -35,30 +36,21 @@ const Post = ({post}) => {
     body = []
   } = post
   return (
+    <Container> 
     <article>
-      <h1>{title}</h1>
-      <span>By {name}</span>
+      <Box>
+      <Heading as='h1' size='lg'>{title}</Heading>
+      <Text fontSize='lg'>By {name}</Text>
       {categories && (
-        <ul>
-          Posted in
-          {categories.map(category => <li key={category}>{category}</li>)}
-        </ul>
+        <HStack spacing={4}>
+          {categories.map(category => <Tag key={category}>{category}</Tag>)}
+        </HStack>
+    
       )}
-      {authorImage && (
-        <div>
-          <img
-            src={urlFor(authorImage)
-              .width(50)
-              .url()}
-            alt={`${name}'s picture`}
-          />
-        </div>
-      )}
-      <PortableText
-        value={body}
-        components={ptComponents}
-      />
+      </Box>
+      <ReactMarkdown>{body}</ReactMarkdown>
     </article>
+    </Container>
   )
 }
 

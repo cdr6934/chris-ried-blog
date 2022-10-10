@@ -30,7 +30,7 @@ const Blog = ({posts}) => {
             </Heading>
           </Stack>
           <Text fontSize={{base: 'lg', md: 'xl'}} maxW="2xl" color="muted">
-            Ice cream pudding dragée macaroon donut marzipan chocolate
+            A little technical blogposts on technology, data science, and a smattering of other interests
           </Text>
         </Stack>
 
@@ -70,7 +70,7 @@ const Blog = ({posts}) => {
                 slug &&
                 <li key={_id}>
                   <Link href="/post/[slug]" as={`/post/${slug.current}`}>
-                    <Text fontSize={{base: 'lg', md: 'xl'}} maxW="2xl">
+                    <Text fontSize={{base: 'md', md: 'lg'}} maxW="2xl">
                       {title}
                     </Text>
                   </Link>{' '}
