@@ -2,6 +2,7 @@
 import groq from 'groq'
 import imageUrlBuilder from '@sanity/image-url'
 import {PortableText} from '@portabletext/react'
+import ChakraUIRenderer from 'chakra-ui-markdown-renderer';
 import ReactMarkdown from 'react-markdown'
 import client from '../../client'
 import {Container, Heading, Text, Tag, Box,  HStack } from '@chakra-ui/react'
@@ -48,7 +49,9 @@ const Post = ({post}) => {
     
       )}
       </Box>
-      <ReactMarkdown>{body}</ReactMarkdown>
+      <ReactMarkdown components={ChakraUIRenderer()}  skipHtml>
+      {body}
+        </ReactMarkdown>
     </article>
     </Container>
   )
