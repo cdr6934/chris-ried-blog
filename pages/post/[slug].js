@@ -3,7 +3,6 @@ import groq from 'groq'
 import imageUrlBuilder from '@sanity/image-url'
 import {PortableText} from '@portabletext/react'
 import client from '../../client'
-import { Heading, Container, Text } from '@chakra-ui/react'
 
 function urlFor (source) {
   return imageUrlBuilder(client).image(source)
@@ -11,7 +10,7 @@ function urlFor (source) {
 
 const ptComponents = {
   types: {
-    image: ({ value } ) => {
+    image: ({ value }) => {
       if (!value?.asset?._ref) {
         return null
       }
@@ -19,14 +18,12 @@ const ptComponents = {
         <img
           alt={value.alt || ' '}
           loading="lazy"
-          src={String(urlFor(value).width(320).height(240).fit('max').auto('format'))}
+          src={urlFor(value).width(320).height(240).fit('max').auto('format')}
         />
       )
     }
   }
 }
-
-
 
 const Post = ({post}) => {
   const {
@@ -37,14 +34,13 @@ const Post = ({post}) => {
     body = []
   } = post
   return (
-    <Container> 
     <article>
-      <Heading>{title}</Heading>
-      <Text fontSize='lg'>By {name}</Text>
+      <h1>{title}</h1>
+      <span>By {name}</span>
       {categories && (
         <ul>
           Posted in
-          {categories.map((category) => <li key={category}>{category}</li>)}
+          {categories.map(category => <li key={category}>{category}</li>)}
         </ul>
       )}
       {authorImage && (
@@ -62,7 +58,6 @@ const Post = ({post}) => {
         components={ptComponents}
       />
     </article>
-    </Container>
   )
 }
 
