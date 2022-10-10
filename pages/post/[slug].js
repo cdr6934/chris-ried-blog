@@ -26,6 +26,7 @@ const ptComponents = {
 }
 
 const Post = ({post}) => {
+  if(!post) return null
   const {
     title = 'Missing title',
     name = 'Missing name',
@@ -68,6 +69,7 @@ const query = groq`*[_type == "post" && slug.current == $slug][0]{
   "authorImage": author->image,
   body
 }`
+  
 export async function getStaticPaths() {
   const paths = await client.fetch(
     groq`*[_type == "post" && defined(slug.current)][].slug.current`
