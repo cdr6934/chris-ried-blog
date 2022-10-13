@@ -7,6 +7,8 @@ import {
   useBreakpointValue,
   Input,
   Button,
+  ListItem,
+  UnorderedList,
 } from '@chakra-ui/react';
 import client from '../client';
 import groq from 'groq';
@@ -34,50 +36,22 @@ const Blog = ({posts}) => {
           </Text>
         </Stack>
 
-        <Stack
-          as="form"
-          onSubmit={e => {
-            e.preventDefault ();
-          }}
-          direction={{base: 'column', md: 'row'}}
-          spacing="4"
-          justify="center"
-        >
-          <Stack maxW={{md: 'lg'}} width="full">
-            <Input
-              size="lg"
-              type="email"
-              required
-              placeholder="Enter your email"
-              autoComplete="false"
-            />
-            <Text
-              fontSize="sm"
-              textAlign={{base: 'center', md: 'start'}}
-              color="subtle"
-            >
-              We care about your data in our privacy policy
-            </Text>
-          </Stack>
-          <Button size="lg" colorScheme="teal" type="submit">
-            Subscribe
-          </Button>
-        </Stack>
         <Stack maxW={{md: 'lg'}} width="full">
-          {posts.length > 0 &&
-            posts.map (
-              ({_id, title = '', slug = '', publishedAt = ''}) =>
-                slug &&
-                <li key={_id}>
-                  <Link href="/post/[slug]" as={`/post/${slug.current}`}>
-                    <Text fontSize={{base: 'md', md: 'lg'}} maxW="2xl">
-                      {title}
-                    </Text>
-                  </Link>{' '}
-                  ({new Date (publishedAt).toDateString ()})
-                </li>
-            )}
-
+          <UnorderedList spacing={5}>
+            {posts.length > 0 &&
+              posts.map (
+                ({_id, title = '', slug = '', publishedAt = ''}) =>
+                  slug &&
+                  <ListItem key={_id}>
+                    <Link href="/post/[slug]" as={`/post/${slug.current}`}>
+                      <Text fontSize={{base: 'lg', md: 'xl'}} maxW="2xl">
+                        {title}
+                      </Text>
+                    </Link>{' '}
+                    <Text>{new Date (publishedAt).toDateString ()}</Text>
+                  </ListItem>
+              )}
+          </UnorderedList>
         </Stack>
       </Stack>
 

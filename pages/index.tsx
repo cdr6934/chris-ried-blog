@@ -18,7 +18,7 @@ const Home: NextPage = () => {
           <Heading size={useBreakpointValue({ base: 'md', md: 'lg' })}>Latest Updates</Heading>
         </Stack>
         <Text fontSize={{ base: 'lg', md: 'xl' }} maxW="2xl" color="muted">
-          Ice cream pudding dragée macaroon donut marzipan chocolate
+          Just a little bit of luck helps the medicine go down..
         </Text>
       </Stack>
      

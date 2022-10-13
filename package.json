@@ -14,7 +14,6 @@
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
     "@fontsource/inter": "^4.5.13",
-    "@portabletext/react": "^1.0.6",
     "@sanity/client": "^3.4.1",
     "@sanity/image-url": "^1.0.1",
     "@sanity/types": "^2.34.0",
@@ -29,9 +28,6 @@
     "react-markdown": "^8.0.3"
   },
   "devDependencies": {
-    "@types/node": "18.8.3",
-    "@types/react": "18.0.21",
-    "@types/react-dom": "18.0.6",
     "eslint": "8.24.0",
     "eslint-config-next": "12.3.1",
     "eslint-config-prettier": "^8.5.0",
